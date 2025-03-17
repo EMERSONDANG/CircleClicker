@@ -1,0 +1,44 @@
+{
+  "name": "simplekit",
+  "version": "1.0.1",
+  "description": "A very simple user interface toolkit for teaching UI architecture.",
+  "author": "Daniel Vogel",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonsequitoria/simplekit.git"
+  },
+  "bugs": "https://github.com/nonsequitoria/simplekit/issues",
+  "type": "module",
+  "exports": {
+    "./imperative-mode": {
+      "import": "./src/imperative-mode.ts",
+      "types": "./src/imperative-mode.ts"
+    },
+    "./canvas-mode": {
+      "import": "./src/canvas-mode.ts",
+      "types": "./src/canvas-mode.ts"
+    },
+    "./utility": {
+      "import": "./src/utility/index.ts",
+      "types": "./src/utility/index.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "start": "tsup --watch",
+    "build": "tsup",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
